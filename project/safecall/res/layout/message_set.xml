@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" 
+                android:background="@color/app_white">
+    <ImageView
+        android:id="@+id/iv_save"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/ic_check"
+        android:layout_marginTop="12dp" />
+    <ImageView
+        android:id="@+id/iv_cancel"
+        android:clickable="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_cancel" />
+    <EditText
+        android:id="@+id/editTextMessage"
+        android:layout_below="@id/iv_save"
+        android:inputType="textMultiLine" 
+        android:maxLines="6"
+        android:lines="4"
+        android:maxLength="160"
+        android:gravity="top|left" 
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>

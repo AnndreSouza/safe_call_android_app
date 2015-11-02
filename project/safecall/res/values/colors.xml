@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="textColor">#FFFFFF</color>
+    <color name="textFieldColor">#FFFFFF</color>
+    <color name="textShadow">#FFFFFF</color>
+    <color name="listViewBg">#FFFFFF</color>
+
+    <color name="sendLightColor">#777777</color>
+    <color name="sendMeduimColor">#999999</color>
+    <color name="sendDarkColor">#BBBBBB</color>
+
+    <color name="barDarkColor">#777777</color>
+    <color name="barMeduimColor">#999999</color>
+    <color name="barLightColor">#BBBBBB</color>
+        
+    <color name="white">#FFFFFF</color>
+    <color name="app_white">#EEEEEE</color>
+    <color name="app_green">#47EC17</color>
+    <color name="light_gray">#DCDDDE</color>
+    <color name="dark_gray">#BCBDC0</color>
+    <color name="app_deep">#CF2022</color>
+    <color name="app_light">#E24141</color>
+    <color name="app_quite_light">#f97979</color>
+    <color name="app_black">#000000</color>
+
+</resources>

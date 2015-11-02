@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" 
+                android:background="@color/app_white">
+    
+    <ImageView
+        android:id="@+id/iv_save_cron"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/ic_check"
+        android:layout_marginTop="12dp" />
+    <ImageView
+        android:id="@+id/iv_cancel_cron"
+        android:clickable="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_cancel" />
+
+    <NumberPicker
+        android:id="@+id/minutePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_alignBaseline="@+id/hourPickers"
+        android:layout_alignBottom="@+id/hourPicker"
+        android:layout_alignParentRight="true"/>
+
+    <NumberPicker
+        android:id="@+id/hourPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_hour"
+        android:layout_marginTop="29dp"/>
+
+    <TextView
+        android:id="@+id/tv_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_save_cron"
+        android:layout_marginTop="14dp" 
+        android:text=" Horas "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/app_black" />
+
+    <TextView
+        android:id="@+id/tv_minutes"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tv_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minutos"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/app_black" />
+
+
+</RelativeLayout>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-package class diagram">
+  <ClassDiagramComponents>
+    <Class name="Alert" package="br.com.safecall.control" visibility="public" xPosition="105.0" yPosition="116.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getAlert" returnType="int" visibility="public">
+          <Argument type="Context" name="c"/>
+          <Argument type="int" name="titleId"/>
+          <Argument type="int" name="messageId"/>
+        </Method>
+        <Method name="getAlert" returnType="String" visibility="public">
+          <Argument type="Context" name="c"/>
+          <Argument type="String" name="title"/>
+          <Argument type="String" name="message"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Controller" package="br.com.safecall.control" visibility="public" xPosition="603.0" yPosition="979.0">
+      <Fields>
+        <Field name="activity" type="MainActivity" visibility="private"/>
+        <Field name="dao" type="DAO" visibility="private"/>
+        <Field name="t" type="Toolkit" visibility="private"/>
+        <Field name="config" type="Configuration1" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Activity" name="activity"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getReports" returnType="ArrayList&lt;ReportItem1&gt;" visibility="public"/>
+        <Method name="sendSms" returnType="String" visibility="public">
+          <Argument type="String" name="tel"/>
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="getConfig" returnType="Configuration1" visibility="public"/>
+        <Method name="setMinutes" returnType="Long" visibility="public">
+          <Argument type="Long" name="minutes"/>
+        </Method>
+        <Method name="setTelephones" returnType="ArrayList&lt;String&gt;" visibility="public">
+          <Argument type="ArrayList&lt;String&gt;" name="tel"/>
+        </Method>
+        <Method name="setMessage" returnType="String" visibility="public">
+          <Argument type="String" name="mess"/>
+        </Method>
+        <Method name="updateMainActiviryUI" returnType="void" visibility="public"/>
+        <Method name="insertIntoHistory" returnType="boolean" visibility="public">
+          <Argument type="String" name="message"/>
+          <Argument type="String" name="result"/>
+          <Argument type="String" name="tel"/>
+          <Argument type="boolean" name="sent"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SafeClickListener" package="br.com.safecall.control.listener" visibility="public" xPosition="1054.0" yPosition="704.0">
+      <Fields>
+        <Field name="click" type="boolean" visibility="public"/>
+        <Field name="home" type="Home" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Home" name="home"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="onClick" returnType="View" visibility="public">
+          <Argument type="View" name="v"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Location" package="br.com.safecall.control" visibility="public" xPosition="1262.0" yPosition="704.0">
+      <Fields>
+        <Field name="activity" type="Activity" visibility="private"/>
+        <Field name="geocoder" type="Geocoder" visibility="private"/>
+        <Field name="bestProvider" type="String" visibility="private"/>
+        <Field name="user" type="List&lt;Address&gt;" visibility="private"/>
+        <Field name="lat" type="double" visibility="package"/>
+        <Field name="lng" type="double" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Activity" name="activity"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getLocation" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Configuration" package="br.com.safecall.control.to" visibility="public" xPosition="391.0" yPosition="654.0">
+      <Fields>
+        <Field name="seconds" type="Long" visibility="private"/>
+        <Field name="message" type="String" visibility="private"/>
+        <Field name="telephones" type="ArrayList&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getSeconds" returnType="Long" visibility="public"/>
+        <Method name="setSeconds" returnType="Long" visibility="public">
+          <Argument type="Long" name="seconds"/>
+        </Method>
+        <Method name="getMessage" returnType="String" visibility="public"/>
+        <Method name="setMessage" returnType="String" visibility="public">
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="getTelephones" returnType="ArrayList&lt;String&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ReportItem" package="br.com.safecall.control.to" visibility="public" xPosition="-15.0" yPosition="275.0">
+      <Fields>
+        <Field name="telephone" type="String" visibility="private"/>
+        <Field name="date" type="String" visibility="private"/>
+        <Field name="sent" type="Boolean" visibility="private"/>
+        <Field name="message" type="String" visibility="private"/>
+        <Field name="status" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getTelephone" returnType="String" visibility="public"/>
+        <Method name="setTelephone" returnType="String" visibility="public">
+          <Argument type="String" name="telephone"/>
+        </Method>
+        <Method name="getDate" returnType="String" visibility="public"/>
+        <Method name="setDate" returnType="String" visibility="public">
+          <Argument type="String" name="date"/>
+        </Method>
+        <Method name="getSent" returnType="Boolean" visibility="public"/>
+        <Method name="setSent" returnType="Boolean" visibility="public">
+          <Argument type="Boolean" name="sent"/>
+        </Method>
+        <Method name="getMessage" returnType="String" visibility="public"/>
+        <Method name="setMessage" returnType="String" visibility="public">
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="getStatus" returnType="String" visibility="public"/>
+        <Method name="setStatus" returnType="String" visibility="public">
+          <Argument type="String" name="status"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Toolkit" package="br.com.safecall.control" visibility="public" xPosition="989.0" yPosition="1387.0">
+      <Fields>
+        <Field name="ACTION_SMS_SENT" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ACTION_SMS_DELIVERED" type="String" visibility="public" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="sendSMS" returnType="String" visibility="package">
+          <Argument type="Activity" name="activity"/>
+          <Argument type="String" name="tel"/>
+          <Argument type="String" name="text"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DAO" package="br.com.safecall.dao" visibility="public" xPosition="786.0" yPosition="1878.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="setMessage" returnType="void" visibility="public">
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="setMinutes" returnType="void" visibility="public">
+          <Argument type="Long" name="minutes"/>
+        </Method>
+        <Method name="setTelephones" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;String&gt;" name="telephones"/>
+        </Method>
+        <Method name="insertIntoHistory" returnType="void" visibility="public">
+          <Argument type="String" name="message"/>
+          <Argument type="String" name="status"/>
+          <Argument type="String" name="telephone"/>
+          <Argument type="boolean" name="sent"/>
+        </Method>
+        <Method name="firstConfig" returnType="void" visibility="public"/>
+        <Method name="getCurrentConfig" returnType="Configuration" visibility="public"/>
+        <Method name="getReports" returnType="ArrayList&lt;ReportItem&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DatabaseHandler" package="br.com.safecall.dao" visibility="public" xPosition="325.0" yPosition="1731.0">
+      <Fields>
+        <Field name="DATABASE_VERSION" type="int" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="database" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="sql" type="ArrayList&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Context" name="context"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setSql" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;String&gt;" name="sql"/>
+        </Method>
+        <Method name="onCreate" returnType="void" visibility="public">
+          <Argument type="SQLiteDatabase" name="db"/>
+        </Method>
+        <Method name="onUpgrade" returnType="void" visibility="public">
+          <Argument type="SQLiteDatabase" name="db"/>
+          <Argument type="int" name="oldVersion"/>
+          <Argument type="int" name="newVersion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DatabaseManager" package="br.com.safecall.dao" visibility="public" xPosition="411.0" yPosition="1412.0">
+      <Fields>
+        <Field name="counter" type="int" visibility="private"/>
+        <Field name="databaseManager" type="DatabaseManager" visibility="private" isStatic="true"/>
+        <Field name="helper" type="SQLiteOpenHelper" visibility="private" isStatic="true"/>
+        <Field name="database" type="SQLiteDatabase" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initializeInstance" returnType="void" visibility="public" isStatic="true" isSynchronized="true">
+          <Argument type="SQLiteOpenHelper" name="helper"/>
+        </Method>
+        <Method name="getInstance" returnType="DatabaseManager" visibility="public" isStatic="true" isSynchronized="true"/>
+        <Method name="openDatabase" returnType="SQLiteDatabase" visibility="public" isSynchronized="true"/>
+        <Method name="closeDatabase" returnType="void" visibility="public" isSynchronized="true"/>
+      </Methods>
+    </Class>
+    <Class name="Config" package="br.com.safecall.view" visibility="public" xPosition="1665.0" yPosition="1029.0">
+      <Fields>
+        <Field name="activity" type="Activity" visibility="private"/>
+        <Field name="controller" type="Controller" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Activity" name="activity"/>
+          <Argument type="Controller" name="controller"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCronDialog" returnType="Dialog" visibility="public"/>
+        <Method name="getTelDialog" returnType="Dialog" visibility="public"/>
+        <Method name="getMessageDialog" returnType="Dialog" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Home" package="br.com.safecall.view" visibility="public" xPosition="1016.0" yPosition="254.0">
+      <Fields>
+        <Field name="activity" type="Activity" visibility="private"/>
+        <Field name="cron" type="CountDownTimer" visibility="private"/>
+        <Field name="location" type="Location" visibility="private"/>
+        <Field name="cronActive" type="boolean" visibility="private"/>
+        <Field name="controller" type="Controller" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Activity" name="activity"/>
+          <Argument type="Controller" name="controller"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getConfig" returnType="Configuration" visibility="public"/>
+        <Method name="updateCron" returnType="void" visibility="public"/>
+        <Method name="getCron" returnType="CountDownTimer" visibility="public"/>
+        <Method name="setCron" returnType="void" visibility="public">
+          <Argument type="CountDownTimer" name="cron"/>
+        </Method>
+        <Method name="isCronActive" returnType="boolean" visibility="public"/>
+        <Method name="setCronActive" returnType="void" visibility="public">
+          <Argument type="boolean" name="cronActive"/>
+        </Method>
+        <Method name="getActivity" returnType="Activity" visibility="public"/>
+        <Method name="setActivity" returnType="void" visibility="public">
+          <Argument type="Activity" name="activity"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MainActivity" package="br.com.safecall.view" visibility="public" xPosition="593.0" yPosition="78.0">
+      <Fields>
+        <Field name="report" type="Report" visibility="private"/>
+        <Field name="config" type="Config" visibility="private"/>
+        <Field name="home" type="Home" visibility="private"/>
+        <Field name="controller" type="Controller" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="onCreate" returnType="void" visibility="public">
+          <Argument type="Bundle" name="savedInstanceState"/>
+        </Method>
+        <Method name="updateUI" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Report" package="br.com.safecall.view" visibility="public" xPosition="-27.0" yPosition="922.0">
+      <Fields>
+        <Field name="activity" type="Activity" visibility="private"/>
+        <Field name="lv" type="ListView" visibility="private"/>
+        <Field name="reports" type="ArrayList&lt;ReportItem&gt;" visibility="private"/>
+        <Field name="controller" type="Controller" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Activity" name="activity"/>
+          <Argument type="Controller" name="controller"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="updateReport" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="br.com.safecall.control.Controller" target="br.com.safecall.dao.DatabaseManager" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="controller" source="br.com.safecall.view.Report" target="br.com.safecall.control.Controller" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="reports" source="br.com.safecall.view.Report" target="br.com.safecall.control.to.ReportItem" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;ReportItem&gt;"/>
+    <HasRelation name="home" source="br.com.safecall.view.MainActivity" target="br.com.safecall.view.Home" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.com.safecall.view.Home" target="br.com.safecall.view.Config" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="t" source="br.com.safecall.control.Controller" target="br.com.safecall.control.Toolkit" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="home" source="br.com.safecall.control.listener.SafeClickListener" target="br.com.safecall.view.Home" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="config" source="br.com.safecall.view.MainActivity" target="br.com.safecall.view.Config" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.com.safecall.control.Alert" target="br.com.safecall.control.Alert" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="controller" source="br.com.safecall.view.Config" target="br.com.safecall.control.Controller" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.com.safecall.dao.DatabaseManager" target="br.com.safecall.dao.DatabaseHandler" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.com.safecall.dao.DAO" target="br.com.safecall.view.Config" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="controller" source="br.com.safecall.view.MainActivity" target="br.com.safecall.control.Controller" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="report" source="br.com.safecall.view.MainActivity" target="br.com.safecall.view.Report" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="instance" source="br.com.safecall.dao.DatabaseManager" target="br.com.safecall.dao.DatabaseManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="activity" source="br.com.safecall.control.Controller" target="br.com.safecall.view.MainActivity" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dao" source="br.com.safecall.control.Controller" target="br.com.safecall.dao.DAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.com.safecall.control.Controller" target="br.com.safecall.view.Config" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="config" source="br.com.safecall.control.Controller" target="br.com.safecall.control.to.Configuration" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="controller" source="br.com.safecall.view.Home" target="br.com.safecall.control.Controller" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.com.safecall.control.Controller" target="br.com.safecall.view.Report" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="location" source="br.com.safecall.view.Home" target="br.com.safecall.control.Location" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.com.safecall.dao.DAO" target="br.com.safecall.view.Report" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
